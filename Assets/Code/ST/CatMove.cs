@@ -5,7 +5,6 @@ using UnityEngine;
 public class CatMove : MonoBehaviour
 {
     //player number
-    public int playerNum = 1;
     string horizontalControl;
     string jumpControl;
     string fireControl;
@@ -42,10 +41,10 @@ public class CatMove : MonoBehaviour
         anim = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
 
-        //player number
-        horizontalControl = "Horizontal";
-        jumpControl = "Jump";
-        fireControl = "Fire1";
+        //player number 2
+        horizontalControl = "Horizontal2";
+        jumpControl = "Jump2";
+        fireControl = "Fire2";
     }
 
     void Update()

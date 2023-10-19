@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-
+    //player number
+    string horizontalControl;
+    string jumpControl;
+    string fireControl;
+    
     public int speed = 5;
     public int jumpForce = 10;
 
@@ -21,12 +25,17 @@ public class PlayerMove : MonoBehaviour
     {
        rb = GetComponent<Rigidbody2D>();
        anim = GetComponent<Animator>();
+
+        //player number 1
+        horizontalControl = "Horizontal";
+        jumpControl = "Jump";
+        fireControl = "Fire1";
     }
 
 
     void Update()
     {
-        float xSpeed = Input.GetAxis("Horizontal") * speed;
+        float xSpeed = Input.GetAxis(horizontalControl) * speed;
 
         if (!hurt) {
         rb.velocity = new Vector2(xSpeed, rb.velocity.y);
@@ -43,13 +52,13 @@ public class PlayerMove : MonoBehaviour
         grounded = Physics2D.OverlapCircle(feet.position, .1f, ground);
         anim.SetBool("Grounded", grounded);
 
-        if(Input.GetButtonDown("Jump") && grounded){
+        if(Input.GetButtonDown(jumpControl) && grounded){
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, jumpForce));
         }
 
 
-        if(Input.GetButtonDown("Fire1")){
+        if(Input.GetButtonDown(fireControl)){
             anim.SetTrigger("Attack");
         }
     }
