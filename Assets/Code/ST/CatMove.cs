@@ -77,7 +77,7 @@ public class CatMove : MonoBehaviour
         }
 
         //loaf
-        if(Input.GetKey("down") && grounded && xSpeed == 0) 
+        if(Input.GetKey("s") && grounded && xSpeed == 0) 
         {
             anim.SetBool("Loaf", true);
         }
