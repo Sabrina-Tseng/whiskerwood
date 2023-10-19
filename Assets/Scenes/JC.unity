@@ -5685,6 +5685,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8104148801024572152, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[7].y
+      value: -0.095289424
+      objectReference: {fileID: 0}
+    - target: {fileID: 8104148801024572152, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[8].y
+      value: -0.093909316
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
