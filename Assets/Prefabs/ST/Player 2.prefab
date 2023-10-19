@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6138951302686978858}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5409305231298296864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5539324445972392357}
+  m_Layer: 0
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5539324445972392357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5409305231298296864}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.21, y: 0.68, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6138951302686978858}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8156177191700714765
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,8 +97,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 5539324445972392357}
   - {fileID: 4204633598356743821}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,12 +239,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e959ac3bf66c8437b8f982f39090883d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNum: 1
   speed: 5
   jumpForce: 1000
   grounded: 0
-  bulletPrefab: {fileID: 0}
-  spawnPoint: {fileID: 0}
+  bulletPrefab: {fileID: 2068749901255864149, guid: b8c1d92dc6fa6442b866be2d2f9a15ce, type: 3}
+  spawnPoint: {fileID: 5539324445972392357}
   recoveryTime: 1
   hurt: 0
   jumpSound: {fileID: 8300000, guid: f6d71fabc35324a8a83ac8e2bfabddb5, type: 3}
