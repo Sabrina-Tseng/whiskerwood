@@ -93,7 +93,7 @@ public class CatMove : MonoBehaviour
             GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir * bulletForce, 0));
             //if the bullet has a direction
-            //newBullet.transform.localScale *= new Vector2(dir,1);
+            newBullet.transform.localScale *= new Vector2(dir,1);
         }
     }
 

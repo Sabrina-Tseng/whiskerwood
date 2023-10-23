@@ -332,6 +332,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Cat-sprite_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 115
+        width: 30
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373d045312d4f4bcebcaa6d6d49a0c30
+      internalID: -878020595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -345,6 +366,7 @@ TextureImporter:
     nameFileIdTable:
       Cat-sprite_0: -15759667
       Cat-sprite_1: 305335439
+      Cat-sprite_10: -878020595
       Cat-sprite_2: 1350392157
       Cat-sprite_3: -1108411604
       Cat-sprite_4: 919905327
