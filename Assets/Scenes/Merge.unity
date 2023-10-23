@@ -131,6 +131,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4845594182243743771, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4845594182243743771, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5478783287981707163, guid: aef136ba243864a6e984735b550b2043, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.21
@@ -236,6 +244,26 @@ PrefabInstance:
     - target: {fileID: 955009345780725696, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 955009345780725696, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_TagString
+      value: Fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045156521578777718, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339821268313275743, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_Mass
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339821268313275743, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629250427389813369, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: jumpForce
+      value: 1800
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -693,9 +721,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6858558502370678475, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8156177191700714765, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156177191700714765, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
+      propertyPath: m_TagString
+      value: Cat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

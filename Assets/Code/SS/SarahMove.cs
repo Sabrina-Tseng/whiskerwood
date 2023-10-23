@@ -22,7 +22,7 @@ public class SarahMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        //player number 2
+        //player number 3
         horizontalControl = "Horizontal3";
         fireControl = "Fire3";
         verticalControl = "Vertical3";
@@ -58,11 +58,14 @@ public class SarahMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-
-        if (other.gameObject.CompareTag("Enemy") && !hurt)
-
+        if (other.gameObject.CompareTag("FishBone"))
         {
-            StartCoroutine(IFrames());
+            Destroy(other.gameObject);
+            
+            if (!hurt)
+            {
+                StartCoroutine(IFrames());
+            }
         }
 
     }
@@ -74,11 +77,6 @@ public class SarahMove : MonoBehaviour
         yield return new WaitForSeconds(recoveryTime);
         hurt = false;
         anim.SetBool("Hurt", hurt);
-
-
-
-
-
     }
 
 

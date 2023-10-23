@@ -72,6 +72,11 @@ public class FoxMove : MonoBehaviour
         StartCoroutine(IFrames());
         }
 
+        // fox carry cat (didn't work)
+        // if (other.gameObject.CompareTag("Cat") && transform.position.y < other.transform.position.y)
+        // {
+        //     other.transform.SetParent(transform);
+        // }
     }
 
     IEnumerator IFrames ()
@@ -83,5 +88,12 @@ public class FoxMove : MonoBehaviour
         anim.SetBool("Hurt", hurt);
     }
 
+    // void OnCollisionExit2D(Collision2D other)
+    // {
+    //     if (other.gameObject.CompareTag("Cat"))
+    //     {
+    //         other.transform.SetParent(null);
+    //     }
+    // }
 
 }

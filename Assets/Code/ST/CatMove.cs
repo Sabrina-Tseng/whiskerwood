@@ -51,8 +51,8 @@ public class CatMove : MonoBehaviour
     {
         float xSpeed = Input.GetAxis(horizontalControl) * speed;
 
-        //no movement if hurt
-        if (!hurt)
+        //movement
+        if (!hurt) //no movement if hurt
         {
             rb.velocity = new Vector2(xSpeed, rb.velocity.y);
             anim.SetFloat("Speed", Mathf.Abs(xSpeed));
