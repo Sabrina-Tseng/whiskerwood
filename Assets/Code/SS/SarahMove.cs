@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class SarahMove : MonoBehaviour
 {
+    //player number
+    string horizontalControl;
+    string verticalControl;
+    string fireControl;
+
     public int speed = 5;
     public float iFrames = .5f;
     public bool hurt;
@@ -16,12 +21,17 @@ public class SarahMove : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        //player number 2
+        horizontalControl = "Horizontal3";
+        fireControl = "Fire3";
+        verticalControl = "Vertical3";
     }
 
     void Update()
     {
-        float xSpeed = Input.GetAxis("Horizontal") * speed;
-        float ySpeed = Input.GetAxis("Vertical") * speed;
+        float xSpeed = Input.GetAxis(horizontalControl) * speed;
+        float ySpeed = Input.GetAxis(verticalControl) * speed;
 
         rb.velocity = new Vector2(xSpeed, ySpeed);
         anim.SetFloat("Speed", Mathf.Abs(xSpeed));
@@ -39,7 +49,7 @@ public class SarahMove : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown(fireControl))
         {
             anim.SetTrigger("Shoot");
         }
