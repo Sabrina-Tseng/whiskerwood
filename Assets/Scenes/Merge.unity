@@ -175,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8014643083449364190, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6788170362701919088, guid: aef136ba243864a6e984735b550b2043, type: 3}
     m_RemovedGameObjects: []
@@ -253,6 +257,18 @@ PrefabInstance:
     - target: {fileID: 955009345780725696, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 955009345780725696, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1190108208276907990, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8629250427389813369, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: ground.m_Bits
+      value: 129
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -585,7 +601,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.6584888
+  orthographic size: 4.658654
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -658,9 +674,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1971234675442623962, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3605628017928327237, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813002269101830737, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
+      propertyPath: ground.m_Bits
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409305231298296864, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6138951302686978858, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
       propertyPath: m_LocalPosition.x
@@ -705,6 +733,10 @@ PrefabInstance:
     - target: {fileID: 8156177191700714765, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
       propertyPath: m_Name
       value: Player 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8156177191700714765, guid: 0cb9e85e764e04b45a17f98794e52059, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
