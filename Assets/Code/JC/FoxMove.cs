@@ -57,9 +57,11 @@ public class FoxMove : MonoBehaviour
         anim.SetFloat("Speed", Mathf.Abs(xSpeed));
         }
         
-        if ((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0)) 
-        {
+        if ((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0)) {
+    
         transform.localScale *= new Vector2(-1,1);
+        dir *= -1;
+    
         }
 
     
