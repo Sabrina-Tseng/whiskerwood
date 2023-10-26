@@ -26,7 +26,7 @@ public class FoxMove : MonoBehaviour
     public bool grounded;
     public LayerMask ground;
     public Transform feet;
-    public float recoveryTime = .5f;
+    public float recoveryTime = 1f;
     public bool hurt = false;
 
     Rigidbody2D rb; 
