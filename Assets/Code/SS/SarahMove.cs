@@ -74,13 +74,19 @@ public class SarahMove : MonoBehaviour
         if (other.gameObject.CompareTag("FishBone"))
         {
             Destroy(other.gameObject);
-
             if (!hurt)
             {
                 StartCoroutine(IFrames());
             }
         }
-
+        if (other.gameObject.CompareTag("Bone"))
+        {
+            Destroy(other.gameObject);
+            if (!hurt)
+            {
+                StartCoroutine(IFrames());
+            }
+        }
     }
 
     IEnumerator IFrames()

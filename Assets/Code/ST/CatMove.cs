@@ -125,9 +125,13 @@ public class CatMove : MonoBehaviour
             StartCoroutine(IFrames1());
         }
 
-        if (other.gameObject.CompareTag("FireBall") && !hurt )
+        if (other.gameObject.CompareTag("FireBall"))
         {
-            StartCoroutine(IFrames2());
+            Destroy(other.gameObject);
+            if (!hurt)
+            {
+                StartCoroutine(IFrames2());
+            }
         }
     }
 

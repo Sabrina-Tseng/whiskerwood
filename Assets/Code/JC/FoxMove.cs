@@ -10,7 +10,7 @@ public class FoxMove : MonoBehaviour
     string fireControl;
     
     //health bar
-    public int maxHealth = 20000;
+    public int maxHealth = 10000;
     public int currentHealth;
     public HealthBar healthBar;
     
@@ -88,10 +88,13 @@ public class FoxMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
      {
-        if (other.gameObject.CompareTag("Enemy") && !hurt)
-
+        if (other.gameObject.CompareTag("FireBall"))
         {
-        StartCoroutine(IFrames());
+            Destroy(other.gameObject);
+            if (!hurt)
+            {
+                StartCoroutine(IFrames());
+            }        
         }
 
         // fox carry cat (didn't work)
@@ -103,13 +106,19 @@ public class FoxMove : MonoBehaviour
 
     IEnumerator IFrames ()
     {
+        TakeDamage(1000);
         hurt = true;
         anim.SetBool("Hurt", hurt);
+        rb.AddForce(new Vector2(dir * -500, 0));
         yield return new WaitForSeconds(recoveryTime);
         hurt = false;
         anim.SetBool("Hurt", hurt);
     }
-
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
     // void OnCollisionExit2D(Collision2D other)
     // {
     //     if (other.gameObject.CompareTag("Cat"))
