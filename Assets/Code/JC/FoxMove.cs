@@ -9,6 +9,11 @@ public class FoxMove : MonoBehaviour
     string jumpControl;
     string fireControl;
     
+    //health bar
+    public int maxHealth = 20000;
+    public int currentHealth;
+    public HealthBar healthBar;
+    
     public int speed = 5;
     public int jumpForce = 10;
 
@@ -30,6 +35,10 @@ public class FoxMove : MonoBehaviour
         horizontalControl = "Horizontal";
         jumpControl = "Jump";
         fireControl = "Fire1";
+
+        //health bar
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
 

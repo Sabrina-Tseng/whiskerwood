@@ -9,6 +9,11 @@ public class CatMove : MonoBehaviour
     string jumpControl;
     string fireControl;
 
+    //health bar
+    public int maxHealth = 10000;
+    public int currentHealth;
+    public HealthBar healthBar;
+
     //move
     public int speed = 5;
     public int jumpForce = 1000;
@@ -45,6 +50,12 @@ public class CatMove : MonoBehaviour
         horizontalControl = "Horizontal2";
         jumpControl = "Jump2";
         fireControl = "Fire2";
+
+        //health bar
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+        // currentHealth = 0;
+        // healthBar.SetHealth(currentHealth);
     }
 
     void Update()
@@ -80,6 +91,9 @@ public class CatMove : MonoBehaviour
         if(Input.GetKey("s") && grounded && xSpeed == 0) 
         {
             anim.SetBool("Loaf", true);
+            // StartCoroutine(LoafRecover());        
+            currentHealth += 1;
+            healthBar.SetHealth(currentHealth);
         }
         else
         {
@@ -108,6 +122,7 @@ public class CatMove : MonoBehaviour
 
     IEnumerator IFrames()
     {
+        
         hurt = true;
         anim.SetBool("Hurt",hurt);
         _audioSource.PlayOneShot(catScream);
@@ -117,4 +132,5 @@ public class CatMove : MonoBehaviour
         anim.SetBool("Hurt",hurt);
     }
 
+    
 }
