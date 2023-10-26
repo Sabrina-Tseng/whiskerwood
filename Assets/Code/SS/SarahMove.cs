@@ -9,6 +9,11 @@ public class SarahMove : MonoBehaviour
     string verticalControl;
     string fireControl;
 
+    //health bar
+    public int maxHealth = 30;
+    public int currentHealth;
+    public HealthBar healthBar;
+
     public int speed = 5;
     public float iFrames = .5f;
     public bool hurt;
@@ -26,6 +31,10 @@ public class SarahMove : MonoBehaviour
         horizontalControl = "Horizontal3";
         fireControl = "Fire3";
         verticalControl = "Vertical3";
+
+        //health bar
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -61,7 +70,7 @@ public class SarahMove : MonoBehaviour
         if (other.gameObject.CompareTag("FishBone"))
         {
             Destroy(other.gameObject);
-            
+
             if (!hurt)
             {
                 StartCoroutine(IFrames());
@@ -72,6 +81,7 @@ public class SarahMove : MonoBehaviour
 
     IEnumerator IFrames()
     {
+        TakeDamage(1);
         hurt = true;
         anim.SetBool("Hurt", hurt);
         yield return new WaitForSeconds(recoveryTime);
@@ -79,5 +89,9 @@ public class SarahMove : MonoBehaviour
         anim.SetBool("Hurt", hurt);
     }
 
-
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
 }
