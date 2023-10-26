@@ -8,6 +8,8 @@ TagManager:
   - Fox
   - Cat
   - FishBone
+  - Cucumber
+  - FireBall
   layers:
   - Default
   - TransparentFX

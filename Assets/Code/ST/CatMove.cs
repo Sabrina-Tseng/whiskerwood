@@ -109,20 +109,31 @@ public class CatMove : MonoBehaviour
             //if the bullet has a direction
             newBullet.transform.localScale *= new Vector2(dir,1);
         }
+
+        //dead
+        if (currentHealth == 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     //hurt
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") && !hurt )
+        if (other.gameObject.CompareTag("Cucumber") && !hurt )
         {
-            StartCoroutine(IFrames());
+            StartCoroutine(IFrames1());
+        }
+
+        if (other.gameObject.CompareTag("FireBall") && !hurt )
+        {
+            StartCoroutine(IFrames2());
         }
     }
 
-    IEnumerator IFrames()
+    IEnumerator IFrames1()
     {
-        
+        TakeDamage(500);
         hurt = true;
         anim.SetBool("Hurt",hurt);
         _audioSource.PlayOneShot(catScream);
@@ -131,6 +142,21 @@ public class CatMove : MonoBehaviour
         hurt = false;
         anim.SetBool("Hurt",hurt);
     }
+    IEnumerator IFrames2()
+    {
+        TakeDamage(2000);
+        hurt = true;
+        anim.SetBool("Hurt",hurt);
+        _audioSource.PlayOneShot(catScream);
+        rb.AddForce(new Vector2(dir * -500, 0));
+        yield return new WaitForSeconds(recoveryTime);
+        hurt = false;
+        anim.SetBool("Hurt",hurt);
+    }
 
-    
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
 }
