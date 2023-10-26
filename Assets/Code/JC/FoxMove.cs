@@ -17,6 +17,12 @@ public class FoxMove : MonoBehaviour
     public int speed = 5;
     public int jumpForce = 10;
 
+    private int dir = 1;
+
+    public GameObject bulletPrefab;
+    public Transform spawnPoint;
+    int bulletForce = 500;
+
     public bool grounded;
     public LayerMask ground;
     public Transform feet;
@@ -67,8 +73,13 @@ public class FoxMove : MonoBehaviour
         }
 
 
-        if(Input.GetButtonDown(fireControl)){
+          if (Input.GetButtonDown(fireControl) && grounded && xSpeed == 0)
+        {
             anim.SetTrigger("Attack");
+            GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+            newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir * bulletForce, 0));
+            //if the bullet has a direction
+            newBullet.transform.localScale *= new Vector2(dir,1);
         }
     }
 
