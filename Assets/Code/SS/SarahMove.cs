@@ -18,6 +18,12 @@ public class SarahMove : MonoBehaviour
     public float iFrames = .5f;
     public bool hurt;
     public float recoveryTime = .3f;
+    private int dir = 1;
+
+    //attack
+    public GameObject bulletPrefab;
+    public Transform spawnPoint;
+    int bulletForce = 500;
 
     Rigidbody2D rb;
     Animator anim;
@@ -47,20 +53,18 @@ public class SarahMove : MonoBehaviour
         anim.SetFloat("ySpeed", ySpeed);
 
 
-        if (xSpeed < 0)
+        //direction
+        if ((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0))
         {
-            transform.localScale = new Vector2(-1, 1);
-        }
-
-        if (xSpeed > 0)
-        {
-            transform.localScale = new Vector2(1, 1);
+            transform.localScale *= new Vector2(-1, 1);
+            dir *= -1;
         }
 
 
-        if (Input.GetButtonDown(fireControl))
+        if (Input.GetButtonDown(fireControl) && xSpeed == 0 && ySpeed == 0)
         {
             anim.SetTrigger("Shoot");
+            StartCoroutine(Attack());
         }
 
     }
@@ -87,6 +91,16 @@ public class SarahMove : MonoBehaviour
         yield return new WaitForSeconds(recoveryTime);
         hurt = false;
         anim.SetBool("Hurt", hurt);
+    }
+
+    IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+        newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir * bulletForce, 0));
+        //if the bullet has a direction
+        newBullet.transform.localScale *= new Vector2(dir, 1);
+
     }
 
     void TakeDamage(int damage)
