@@ -28,6 +28,7 @@ public class CatMove : MonoBehaviour
     //hurt
     public float recoveryTime = 1f;
     public bool hurt = false;
+    public GameObject Skull;
 
     //audio
     public AudioClip jumpSound;
@@ -114,6 +115,7 @@ public class CatMove : MonoBehaviour
         if (currentHealth == 0)
         {
             Destroy(this.gameObject);
+            Instantiate(Skull, spawnPoint.position, Quaternion.identity);
         }
     }
 

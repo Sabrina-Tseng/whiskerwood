@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 3605628017928327237}
   m_Layer: 7
   m_Name: Player 2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,6 +239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e959ac3bf66c8437b8f982f39090883d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 10000
+  currentHealth: 0
+  healthBar: {fileID: 0}
   speed: 5
   jumpForce: 1000
   grounded: 0
@@ -246,6 +249,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 5539324445972392357}
   recoveryTime: 1
   hurt: 0
+  Skull: {fileID: 0}
   jumpSound: {fileID: 8300000, guid: f6d71fabc35324a8a83ac8e2bfabddb5, type: 3}
   catScream: {fileID: 8300000, guid: cfb402195e79d4bdaa54b29019150e77, type: 3}
   ground:

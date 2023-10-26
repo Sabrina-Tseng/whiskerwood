@@ -19,6 +19,8 @@ public class FoxMove : MonoBehaviour
 
     private int dir = 1;
 
+    public GameObject Skull;
+
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     int bulletForce = 500;
@@ -82,6 +84,13 @@ public class FoxMove : MonoBehaviour
             newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir * bulletForce, 0));
             //if the bullet has a direction
             newBullet.transform.localScale *= new Vector2(dir,1);
+        }
+
+        //dead
+        if (currentHealth == 0)
+        {
+            Destroy(this.gameObject);
+            Instantiate(Skull, spawnPoint.position, Quaternion.identity);
         }
     }
 

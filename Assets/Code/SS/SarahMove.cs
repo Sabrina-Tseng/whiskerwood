@@ -48,9 +48,12 @@ public class SarahMove : MonoBehaviour
         float xSpeed = Input.GetAxis(horizontalControl) * speed;
         float ySpeed = Input.GetAxis(verticalControl) * speed;
 
-        rb.velocity = new Vector2(xSpeed, ySpeed);
-        anim.SetFloat("Speed", Mathf.Abs(xSpeed));
-        anim.SetFloat("ySpeed", ySpeed);
+        if (!hurt)
+        {
+            rb.velocity = new Vector2(xSpeed, ySpeed);
+            anim.SetFloat("Speed", Mathf.Abs(xSpeed));
+            anim.SetFloat("ySpeed", ySpeed);
+        }
 
 
         //direction
@@ -65,6 +68,12 @@ public class SarahMove : MonoBehaviour
         {
             anim.SetTrigger("Shoot");
             StartCoroutine(Attack());
+        }
+
+        //dead
+        if (currentHealth == 0)
+        {
+            Destroy(this.gameObject);
         }
 
     }
