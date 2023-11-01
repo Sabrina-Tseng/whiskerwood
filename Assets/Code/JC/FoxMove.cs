@@ -68,7 +68,7 @@ public class FoxMove : MonoBehaviour
 
     
 
-        grounded = Physics2D.OverlapCircle(feet.position, .1f, ground);
+        grounded = Physics2D.OverlapCircle(feet.position, .5f, ground);
         anim.SetBool("Grounded", grounded);
 
         if(Input.GetButtonDown(jumpControl) && grounded){

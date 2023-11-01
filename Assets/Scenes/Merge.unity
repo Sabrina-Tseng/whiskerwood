@@ -370,6 +370,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 1190108208276907990, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 2791230943750563370, guid: b8df4f59faa3748bda92f93b41883a51, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7126,7 +7130,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.940808
+  orthographic size: 4.9492216
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
