@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -8800697210441392047}
   - component: {fileID: 5444500297717406914}
   - component: {fileID: 2890283400655055451}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: Fish Bone
   m_TagString: FishBone
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -878020595, guid: ce1c2fa37fa234bdfb999aac5045dae2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
