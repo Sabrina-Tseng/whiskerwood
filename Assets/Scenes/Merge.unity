@@ -398,15 +398,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1807156497098922422, guid: becedc900587e4e1aa5c4facbdef6d38, type: 3}
       propertyPath: m_TagString
-      value: FireBall
+      value: Cucumber
       objectReference: {fileID: 0}
     - target: {fileID: 6060617918113364478, guid: becedc900587e4e1aa5c4facbdef6d38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.77
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 6060617918113364478, guid: becedc900587e4e1aa5c4facbdef6d38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.32
+      value: -1.64
       objectReference: {fileID: 0}
     - target: {fileID: 6060617918113364478, guid: becedc900587e4e1aa5c4facbdef6d38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7052,7 +7052,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.932178
+  orthographic size: 4.9436617
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

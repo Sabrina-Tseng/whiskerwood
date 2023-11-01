@@ -87,7 +87,7 @@ public class FoxMove : MonoBehaviour
         }
 
         //dead
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
             Instantiate(Skull, spawnPoint.position, Quaternion.identity);
@@ -97,6 +97,14 @@ public class FoxMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
      {
+        if (other.gameObject.CompareTag("Cucumber"))
+        {
+            // anim.SetTrigger("Attack");
+            currentHealth+=2000;
+            healthBar.SetHealth(currentHealth);
+            Destroy(other.gameObject);
+        }
+
         if (other.gameObject.CompareTag("FireBall"))
         {
             Destroy(other.gameObject);

@@ -112,7 +112,7 @@ public class CatMove : MonoBehaviour
         }
 
         //dead
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             Destroy(this.gameObject);
             Instantiate(Skull, spawnPoint.position, Quaternion.identity);
