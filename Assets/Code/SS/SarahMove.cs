@@ -1,17 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SarahMove : MonoBehaviour
 {
+    //game manager
+    public GameObject main;
+
     //player number
     string horizontalControl;
     string verticalControl;
     string fireControl;
-
-    //scene transition
-    public int currentScene = 1;
 
     //health bar
     public int maxHealth = 30;
@@ -77,16 +76,19 @@ public class SarahMove : MonoBehaviour
         //go to next scene
         if (currentHealth <= 20)
         {
-            SceneManager.LoadScene("Level 2");
+            GameManager gameManager = main.GetComponent<GameManager>();
+            gameManager.LoadLevel("Level 2");
         }
         if (currentHealth <= 10)
         {
-            SceneManager.LoadScene("Level 3");
+            GameManager gameManager = main.GetComponent<GameManager>();
+            gameManager.LoadLevel("Level 3");
         }
         //dead
         if (currentHealth == 0)
         {
-            Destroy(this.gameObject);
+            GameManager gameManager = main.GetComponent<GameManager>();
+            gameManager.LoadLevel("Win");
         }
 
     }
@@ -137,4 +139,5 @@ public class SarahMove : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
+    
 }
