@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SarahMove : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class SarahMove : MonoBehaviour
     string horizontalControl;
     string verticalControl;
     string fireControl;
+
+    //scene transition
+    public int currentScene = 1;
 
     //health bar
     public int maxHealth = 30;
@@ -56,7 +60,6 @@ public class SarahMove : MonoBehaviour
             anim.SetFloat("ySpeed", ySpeed);
         }
 
-
         //direction
         if ((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0))
         {
@@ -64,13 +67,22 @@ public class SarahMove : MonoBehaviour
             dir *= -1;
         }
 
-
+        //attack
         if (Input.GetButtonDown(fireControl) && xSpeed == 0 && ySpeed == 0 && !attacking)
         {
             anim.SetTrigger("Shoot");
             StartCoroutine(Attack());
         }
 
+        //go to next scene
+        if (currentHealth <= 20)
+        {
+            SceneManager.LoadScene("Level 2");
+        }
+        if (currentHealth <= 10)
+        {
+            SceneManager.LoadScene("Level 3");
+        }
         //dead
         if (currentHealth == 0)
         {
