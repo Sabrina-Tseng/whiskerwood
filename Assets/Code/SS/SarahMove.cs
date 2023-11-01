@@ -24,6 +24,7 @@ public class SarahMove : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform spawnPoint;
     int bulletForce = 500;
+    public bool attacking;
 
     Rigidbody2D rb;
     Animator anim;
@@ -64,7 +65,7 @@ public class SarahMove : MonoBehaviour
         }
 
 
-        if (Input.GetButtonDown(fireControl) && xSpeed == 0 && ySpeed == 0)
+        if (Input.GetButtonDown(fireControl) && xSpeed == 0 && ySpeed == 0 && !attacking)
         {
             anim.SetTrigger("Shoot");
             StartCoroutine(Attack());
@@ -110,12 +111,13 @@ public class SarahMove : MonoBehaviour
 
     IEnumerator Attack()
     {
+        attacking = true;
         yield return new WaitForSeconds(0.5f);
         GameObject newBullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
         newBullet.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir * bulletForce, 0));
         //if the bullet has a direction
         newBullet.transform.localScale *= new Vector2(dir, 1);
-
+        attacking = false;
     }
 
     void TakeDamage(int damage)
