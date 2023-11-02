@@ -2659,6 +2659,10 @@ PrefabInstance:
       propertyPath: gemPosition
       value: 
       objectReference: {fileID: 538155526}
+    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: currentHealth
+      value: 19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
