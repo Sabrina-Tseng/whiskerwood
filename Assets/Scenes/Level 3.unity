@@ -757,7 +757,7 @@ Transform:
   m_GameObject: {fileID: 352591023}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2149997, y: 0.6147835, z: -13}
+  m_LocalPosition: {x: 6.974999, y: 1.0075562, z: -13.149179}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2183,6 +2183,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &410094914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 410094915}
+  m_Layer: 0
+  m_Name: GemPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &410094915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410094914}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.73, y: 2.79, z: -0.14917937}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &411865216
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,7 +2276,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.487089
+  orthographic size: 8.2667265
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2270,7 +2301,7 @@ Transform:
   m_GameObject: {fileID: 411865216}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.2149997, y: 0.6147835, z: -13}
+  m_LocalPosition: {x: 6.974999, y: 1.0075562, z: -13.149179}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65236,6 +65267,9 @@ MonoBehaviour:
   - target: {fileID: 1969711978}
     weight: 1
     radius: 3
+  - target: {fileID: 410094915}
+    weight: 1
+    radius: 3
 --- !u!4 &1939168790
 Transform:
   m_ObjectHideFlags: 0
@@ -65245,7 +65279,7 @@ Transform:
   m_GameObject: {fileID: 1939168788}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.18971904, y: 1.0195801, z: 0}
+  m_LocalPosition: {x: 5.2503304, y: 1.5961081, z: -0.048579484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65269,3 +65303,4 @@ SceneRoots:
   - {fileID: 158287103}
   - {fileID: 306240980}
   - {fileID: 591543764}
+  - {fileID: 410094915}

@@ -11,6 +11,8 @@ TagManager:
   - FishBone
   - FireBall
   - Gem1
+  - Gem2
+  - Gem3
   layers:
   - Default
   - TransparentFX
