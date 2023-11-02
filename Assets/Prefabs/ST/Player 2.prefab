@@ -352,7 +352,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 5539324445972392357}
   recoveryTime: 1
   hurt: 0
-  Skull: {fileID: 0}
+  Skull: {fileID: 9108282713969388903, guid: 05b5c36b39199410b8774eb502b8efc6, type: 3}
   jumpSound: {fileID: 8300000, guid: f6d71fabc35324a8a83ac8e2bfabddb5, type: 3}
   catScream: {fileID: 8300000, guid: cfb402195e79d4bdaa54b29019150e77, type: 3}
   ground:
