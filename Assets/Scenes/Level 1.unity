@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &33139983
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 33139984}
+  m_Layer: 0
+  m_Name: GemPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &33139984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33139983}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.75, y: 7.18, z: -0.14917937}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &75603134
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,9 +299,25 @@ PrefabInstance:
       value: Player 3
       objectReference: {fileID: 0}
     - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: gem1
+      value: 
+      objectReference: {fileID: 1032209479371958406, guid: 1565741801ad8415b8622c73617ac9ad, type: 3}
+    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: gem2
+      value: 
+      objectReference: {fileID: 2494701846970548240, guid: d96a2f8d131c245cf9f0bd8ca62fad4b, type: 3}
+    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: gem3
+      value: 
+      objectReference: {fileID: 1907359739785069464, guid: 9374377f5e52d443fbfb9f7c72cb85f2, type: 3}
+    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
       propertyPath: main
       value: 
       objectReference: {fileID: 434849204}
+    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      propertyPath: gemPosition
+      value: 
+      objectReference: {fileID: 33139984}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5663,6 +5710,9 @@ MonoBehaviour:
     weight: 1
     radius: 2
   - target: {fileID: 316291127}
+    weight: 1
+    radius: 3
+  - target: {fileID: 8591866387442914963, guid: 1565741801ad8415b8622c73617ac9ad, type: 3}
     weight: 1
     radius: 3
 --- !u!4 &823569584
@@ -25878,7 +25928,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.4843745
+  orthographic size: 4.936829
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -28515,3 +28565,4 @@ SceneRoots:
   - {fileID: 1507418211}
   - {fileID: 319297268}
   - {fileID: 1747712040}
+  - {fileID: 33139984}

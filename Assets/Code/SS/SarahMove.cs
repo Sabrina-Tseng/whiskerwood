@@ -5,7 +5,7 @@ using UnityEngine;
 public class SarahMove : MonoBehaviour
 {
     //game manager
-    public GameObject main;
+    private GameManager gameManager;
 
     //player number
     string horizontalControl;
@@ -16,6 +16,12 @@ public class SarahMove : MonoBehaviour
     public int maxHealth = 30;
     public int currentHealth;
     public HealthBar healthBar;
+
+    //gems
+    public GameObject gem1;
+    public GameObject gem2;
+    public GameObject gem3;
+    public Transform gemPosition;
 
     public int speed = 5;
     public float iFrames = .5f;
@@ -34,6 +40,8 @@ public class SarahMove : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
@@ -76,18 +84,17 @@ public class SarahMove : MonoBehaviour
         //go to next scene
         if (currentHealth <= 20)
         {
-            GameManager gameManager = main.GetComponent<GameManager>();
-            gameManager.LoadLevel("Level 2");
+            //gameManager.LoadLevel("Level 2");
+            Destroy(this.gameObject);
+            Instantiate(gem1, gemPosition.position, Quaternion.identity);
         }
         if (currentHealth <= 10)
         {
-            GameManager gameManager = main.GetComponent<GameManager>();
             gameManager.LoadLevel("Level 3");
         }
         //dead
         if (currentHealth == 0)
         {
-            GameManager gameManager = main.GetComponent<GameManager>();
             gameManager.LoadLevel("Win");
         }
 

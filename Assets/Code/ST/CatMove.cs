@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CatMove : MonoBehaviour
 {
+    //game manager
+    private GameManager gameManager;
+
     //player number
     string horizontalControl;
     string jumpControl;
@@ -43,6 +46,8 @@ public class CatMove : MonoBehaviour
 
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         _audioSource = GetComponent<AudioSource>();
@@ -55,8 +60,6 @@ public class CatMove : MonoBehaviour
         //health bar
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
-        // currentHealth = 0;
-        // healthBar.SetHealth(currentHealth);
     }
 
     void Update()
@@ -120,7 +123,6 @@ public class CatMove : MonoBehaviour
         }
     }
 
-    //hurt
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Cucumber") && !hurt )
@@ -135,6 +137,19 @@ public class CatMove : MonoBehaviour
             {
                 StartCoroutine(IFrames2());
             }
+        }
+                
+        if (other.gameObject.CompareTag("Gem1"))
+        {
+            gameManager.LoadLevel("Level 2");      
+        }
+        if (other.gameObject.CompareTag("Gem2"))
+        {
+            gameManager.LoadLevel("Level 3");      
+        }
+        if (other.gameObject.CompareTag("Gem3"))
+        {
+            gameManager.LoadLevel("Win");      
         }
     }
 

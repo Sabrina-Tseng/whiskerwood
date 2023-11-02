@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FoxMove : MonoBehaviour
 {
+    //game manager
+    private GameManager gameManager;
+    
     //player number
     string horizontalControl;
     string jumpControl;
@@ -36,8 +39,10 @@ public class FoxMove : MonoBehaviour
 
     void Start()
     {
-       rb = GetComponent<Rigidbody2D>();
-       anim = GetComponent<Animator>();
+        gameManager = FindObjectOfType<GameManager>();
+
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         //player number 1
         horizontalControl = "Horizontal";
@@ -114,6 +119,19 @@ public class FoxMove : MonoBehaviour
             }        
         }
 
+        if (other.gameObject.CompareTag("Gem1"))
+        {
+            gameManager.LoadLevel("Level 2");      
+        }
+        if (other.gameObject.CompareTag("Gem2"))
+        {
+            gameManager.LoadLevel("Level 3");      
+        }
+        if (other.gameObject.CompareTag("Gem3"))
+        {
+            gameManager.LoadLevel("Win");      
+        }
+        
         // fox carry cat (didn't work)
         // if (other.gameObject.CompareTag("Cat") && transform.position.y < other.transform.position.y)
         // {

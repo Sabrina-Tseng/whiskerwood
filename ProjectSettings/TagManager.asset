@@ -10,6 +10,7 @@ TagManager:
   - Cat
   - FishBone
   - FireBall
+  - Gem1
   layers:
   - Default
   - TransparentFX
