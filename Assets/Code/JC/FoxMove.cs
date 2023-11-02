@@ -16,13 +16,16 @@ public class FoxMove : MonoBehaviour
     public int maxHealth = 10000;
     public int currentHealth;
     public HealthBar healthBar;
+    public GameObject Skull;
+
+    //audio
+    public AudioClip jumpSound;
+    AudioSource _audioSource;
     
     public int speed = 5;
     public int jumpForce = 10;
 
     private int dir = 1;
-
-    public GameObject Skull;
 
     public GameObject bulletPrefab;
     public Transform spawnPoint;
@@ -43,6 +46,7 @@ public class FoxMove : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
 
         //player number 1
         horizontalControl = "Horizontal";
@@ -79,6 +83,7 @@ public class FoxMove : MonoBehaviour
         if(Input.GetButtonDown(jumpControl) && grounded){
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, jumpForce));
+            _audioSource.PlayOneShot(jumpSound);
         }
 
 
@@ -131,7 +136,7 @@ public class FoxMove : MonoBehaviour
         {
             gameManager.LoadLevel("Win");      
         }
-        
+
         // fox carry cat (didn't work)
         // if (other.gameObject.CompareTag("Cat") && transform.position.y < other.transform.position.y)
         // {

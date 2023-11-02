@@ -235,10 +235,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7140201577e5a4c49a2d6d15ea65d0a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 0}
   maxHealth: 30
-  currentHealth: 0
+  currentHealth: 30
   healthBar: {fileID: 4389227646363347320}
+  gem1: {fileID: 1032209479371958406, guid: 1565741801ad8415b8622c73617ac9ad, type: 3}
+  gem2: {fileID: 2494701846970548240, guid: d96a2f8d131c245cf9f0bd8ca62fad4b, type: 3}
+  gem3: {fileID: 1907359739785069464, guid: 9374377f5e52d443fbfb9f7c72cb85f2, type: 3}
+  gemPosition: {fileID: 0}
   speed: 5
   iFrames: 0.5
   hurt: 0

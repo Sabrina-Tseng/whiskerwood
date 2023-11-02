@@ -51,8 +51,9 @@ public class SarahMove : MonoBehaviour
         verticalControl = "Vertical3";
 
         //health bar
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        //healthBar.SetMaxHealth(30);
+        healthBar.SetHealth(currentHealth);
+
     }
 
     void Update()
@@ -82,20 +83,22 @@ public class SarahMove : MonoBehaviour
         }
 
         //go to next scene
-        if (currentHealth <= 20)
+        if (currentHealth == 20)
         {
             //gameManager.LoadLevel("Level 2");
             Destroy(this.gameObject);
             Instantiate(gem1, gemPosition.position, Quaternion.identity);
         }
-        if (currentHealth <= 10)
+        if (currentHealth == 10)
         {
-            gameManager.LoadLevel("Level 3");
+            Destroy(this.gameObject);
+            Instantiate(gem2, gemPosition.position, Quaternion.identity);
         }
         //dead
         if (currentHealth == 0)
         {
-            gameManager.LoadLevel("Win");
+            Destroy(this.gameObject);
+            Instantiate(gem3, gemPosition.position, Quaternion.identity);
         }
 
     }

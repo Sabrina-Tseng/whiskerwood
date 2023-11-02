@@ -299,22 +299,6 @@ PrefabInstance:
       value: Player 3
       objectReference: {fileID: 0}
     - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
-      propertyPath: gem1
-      value: 
-      objectReference: {fileID: 1032209479371958406, guid: 1565741801ad8415b8622c73617ac9ad, type: 3}
-    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
-      propertyPath: gem2
-      value: 
-      objectReference: {fileID: 2494701846970548240, guid: d96a2f8d131c245cf9f0bd8ca62fad4b, type: 3}
-    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
-      propertyPath: gem3
-      value: 
-      objectReference: {fileID: 1907359739785069464, guid: 9374377f5e52d443fbfb9f7c72cb85f2, type: 3}
-    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
-      propertyPath: main
-      value: 
-      objectReference: {fileID: 434849204}
-    - target: {fileID: 8987891122320199287, guid: aef136ba243864a6e984735b550b2043, type: 3}
       propertyPath: gemPosition
       value: 
       objectReference: {fileID: 33139984}
