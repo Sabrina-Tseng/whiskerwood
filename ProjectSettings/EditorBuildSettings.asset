@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Sabrina.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: f534da3e6f3c64efdb0123adec602b16
-  - enabled: 1
     path: Assets/Scenes/Merge.unity
     guid: 354c6aafae8a7438a939253bbf51e929
   - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: f534da3e6f3c64efdb0123adec602b16
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: aaf32b42f046b4b2ea0cce6db80c9f88
+  - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: b50da2a485007417aa110ed792d83eb7
+  - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: 8020c3926b8b949dbb121729b5eb189f
   m_configObjects: {}
