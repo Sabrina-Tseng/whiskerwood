@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8629250427389813369}
   - component: {fileID: 6339821268313275743}
   - component: {fileID: 8104148801024572152}
+  - component: {fileID: 8997583761641575598}
   m_Layer: 6
   m_Name: Player1
   m_TagString: Fox
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.27, y: -1.25, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 6.2684493, y: 6.2684493, z: 6.2684493}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5843362207485851176}
@@ -128,8 +129,8 @@ MonoBehaviour:
   currentHealth: 20000
   healthBar: {fileID: 1996500886793768193}
   speed: 5
-  jumpForce: 2300
-  Skull: {fileID: 0}
+  jumpForce: 1000
+  Skull: {fileID: 9108282713969388903, guid: 05b5c36b39199410b8774eb502b8efc6, type: 3}
   bulletPrefab: {fileID: 5549033117792702317, guid: 3665149efa77c4313b6d0261e8bc8320, type: 3}
   spawnPoint: {fileID: 3518340302779933332}
   grounded: 0
@@ -151,7 +152,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 5
@@ -173,7 +174,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955009345780725696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -223,6 +224,51 @@ PolygonCollider2D:
       - {x: 0.15431872, y: 0.020042393}
       - {x: 0.13340688, y: 0.03336396}
   m_UseDelaunayMesh: 0
+--- !u!61 &8997583761641575598
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955009345780725696}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.033046857, y: -0.0014062524}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.31, y: 0.2}
+    newSize: {x: 0.31, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.19609413, y: 0.18593755}
+  m_EdgeRadius: 0
 --- !u!1 &1190108208276907990
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +281,7 @@ GameObject:
   m_Layer: 6
   m_Name: Feet
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
