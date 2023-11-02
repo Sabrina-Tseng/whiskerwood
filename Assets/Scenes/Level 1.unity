@@ -277,7 +277,10 @@ PrefabInstance:
       objectReference: {fileID: 1964392120}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5478783287981707163, guid: aef136ba243864a6e984735b550b2043, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1413545893}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aef136ba243864a6e984735b550b2043, type: 3}
 --- !u!1 &146441731
@@ -418,15 +421,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6935438937278151055, guid: 45aebb75e37cd4258bb1e57d663903b6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6935438937278151055, guid: 45aebb75e37cd4258bb1e57d663903b6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6935438937278151055, guid: 45aebb75e37cd4258bb1e57d663903b6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6935438937278151055, guid: 45aebb75e37cd4258bb1e57d663903b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -462,7 +465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6935438937278151055, guid: 45aebb75e37cd4258bb1e57d663903b6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -120
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 6935438937278151055, guid: 45aebb75e37cd4258bb1e57d663903b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -26008,7 +26011,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.948692
+  orthographic size: 4.9301887
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -26671,7 +26674,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -26718,7 +26721,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 371483848}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 316291127}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -28751,7 +28754,6 @@ SceneRoots:
   - {fileID: 1836871241}
   - {fileID: 78412721}
   - {fileID: 1130288720}
-  - {fileID: 1413545893}
   - {fileID: 1194303871}
   - {fileID: 527751274}
   - {fileID: 1617472075}
