@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
-  currentHealth: 30
+  currentHealth: 19
   healthBar: {fileID: 4389227646363347320}
   gem1: {fileID: 1032209479371958406, guid: 1565741801ad8415b8622c73617ac9ad, type: 3}
   gem2: {fileID: 2494701846970548240, guid: d96a2f8d131c245cf9f0bd8ca62fad4b, type: 3}

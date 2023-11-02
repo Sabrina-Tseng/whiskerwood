@@ -51,7 +51,7 @@ public class SarahMove : MonoBehaviour
         verticalControl = "Vertical3";
 
         //health bar
-        //healthBar.SetMaxHealth(30);
+        healthBar.SetMaxHealth(30);
         healthBar.SetHealth(currentHealth);
 
     }
