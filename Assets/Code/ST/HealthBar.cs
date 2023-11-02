@@ -18,4 +18,9 @@ public class HealthBar : MonoBehaviour
     {
         slider.value = health;
     }
+
+    public void ChangeDirection()
+    {
+        transform.localScale *= new Vector2(-1, 1);
+    }
 }

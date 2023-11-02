@@ -61,9 +61,9 @@ public class FoxMove : MonoBehaviour
         
         if ((xSpeed < 0 && transform.localScale.x > 0) || (xSpeed > 0 && transform.localScale.x < 0)) {
     
-        transform.localScale *= new Vector2(-1,1);
-        dir *= -1;
-    
+            transform.localScale *= new Vector2(-1,1);
+            dir *= -1;
+            healthBar.ChangeDirection();
         }
 
     

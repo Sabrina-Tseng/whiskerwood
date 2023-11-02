@@ -75,6 +75,7 @@ public class CatMove : MonoBehaviour
         {
             transform.localScale *= new Vector2(-1, 1);
             dir *= -1;
+            healthBar.ChangeDirection();
         }
 
         //jump
